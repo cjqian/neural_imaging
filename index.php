@@ -144,19 +144,9 @@
 
 				<img src ="out.png"></img>
 
-				<img id="loadinggif" src="buttons/dots.gif" />
+				<!--<img id="loadinggif" src="buttons/wait.gif" />-->
 
 			</aside>
-
-			<footer>
-				<center><h4>Footer</h4>
-					<p>copyrights</p></center>
-				</footer>
-
-			</div>
-		</body>
-
-
 <footer>
 	<center><h4>Product of Crystal Qian and Zi Xiang Pan</h4>
 	<p>Credits to <a href="http://arxiv.org/pdf/1508.06576v2.pdf">Leon Gatys'</a> paper on a deep neural network algorithm and <a href="https://github.com/jcjohnson/neural-style">@jcjohnson's</a> implementation.</p><br/>
