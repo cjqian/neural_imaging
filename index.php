@@ -13,6 +13,7 @@
 
 <!-- CSS and JS
 	================================================== -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/newlayout.css">
 	<script src="js/loadfb.js"></script>
 	<script src="js/addfilter.js"></script>
@@ -21,7 +22,11 @@
 	================================================== -->
 	
 	<body class="no-touch">
-		<div id="pagewrap">
+	<?php
+				session_start();
+						?>
+
+	<div id="pagewrap">
 
 			<header>
 				<h1><center>Deepict</center></h1>
@@ -29,15 +34,16 @@
 				<br></br>
 			</header>
 
+    
 			<section id="content">
 				<center><h2>1. Login</h2></center>
 				<br>
 				<div id="#pic-container">
-					<img id="placeholder" src="buttons/blankfb.png">
+					<img id="~/Code/neural_imaging/img/preview/placeholder" src="buttons/blankfb.png">
 					<canvas id="fb-img" width="200px" height="200px"></canvas>
+
+				<button onclick="facebookLogin()"><i class="fa fa-facebook"></i> Connect to Facebook</button></center>
 				</div>
-				<br>
-				<button onclick="facebookLogin()"><img src="buttons/fb.png" alt="Submit" ></button></center>
 			</section>
 
 			<section id="middle">
@@ -49,77 +55,76 @@
 					<!-- Define all of the tiles: -->
 					<div class="box">
 						<div class="boxInner">
-							<img id="starry_night" src="img/preview/starry_night.jpg" onclick="" />
+							<img id="~/Code/neural_imaging/img/preview/starry_night" src="img/preview/starry_night.jpg" onclick="" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Starry Night</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="the_scream" src="img/preview/the_scream.png" />
+							<img id="~/Code/neural_imaging/img/preview/the_scream" src="img/preview/the_scream.png" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">The Scream</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="woman-with-hat" src="img/preview/woman-with-hat.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/woman-with-hat" src="img/preview/woman-with-hat.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Woman with hat</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="picasso" src="img/preview/picasso.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/picasso" src="img/preview/picasso.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Picasso</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="escher_sphere" src="img/preview/escher_sphere.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/escher_sphere" src="img/preview/escher_sphere.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Escher</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="pollock" src="img/preview/pollock.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/pollock" src="img/preview/pollock.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Autumn Rhythm</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="mona" src="img/preview/mona.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/mona" src="img/preview/mona.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Mona Lisa</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="FightingTemeraire" src="img/preview/FightingTemeraire.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/FightingTemeraire" src="img/preview/FightingTemeraire.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Fighting Temeraire</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="sunrise" src="img/preview/sunrise.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/sunrise" src="img/preview/sunrise.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Sunrise impression</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="mondrian" src="img/preview/mondrian.jpg" />
+							<img id="~/Code/neural_imaging/img/preview/mondrian" src="img/preview/mondrian.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Mondrian</div>
 						</div>
 					</div>
 
 				</div> <!--end wrap-->
-				<center><input type="submit" value="submit" /></center>
 				</form>
 
 
@@ -128,26 +133,32 @@
 			<aside id="sidebar">
 				<center><h2>3. Voila!</h2></center>
 				<?php
-				session_start();
 
-				$_SESSION['imgsrc'] = $_POST['img'];	
+       
+                if(isset($_POST['img'])){
 
-				$output = shell_exec("sudo -u root /var/www/html/neural.sh");
-
-				$art = "examples/inputs/starry_night.jpg";
+                $artvar = $_POST['img'];
+                print $artvar;
+				$art = $artvar . ".jpg";
 				$source = "examples/inputs/brad_pitt.jpg";
+
+                
+				$output = shell_exec("./neural.sh " . $art . " " . $source);
+
+                echo '<script language="javascript">';
+                    echo 'alert("Done!")';
+                echo '</script>';
 
 				ini_set('display_errors',1);
 				ini_set('display_startup_errors',1);
 				error_reporting(-1);
 
-				echo $output;
+				print $output;
+                }
 				?>
+				<!--<img id="img/preview/loadinggif" src="buttons/wait.gif" />-->
 
-				<img src ="out.png"></img>
-
-				<!--<img id="loadinggif" src="buttons/wait.gif" />-->
-
+                <a href="./out.png">Check it out here!</a>
 			</aside>
 <footer>
 	<center><h4>Product of Crystal Qian and Zi Xiang Pan</h4>

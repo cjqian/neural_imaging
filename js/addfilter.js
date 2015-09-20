@@ -2,7 +2,7 @@ $(function(){
 	$('img').click(function(){
 
     	// Get the src of the image
-    	var src = $(this).attr("src");
+    	var src = $(this).attr("id");
 
     	$.ajax({
     		type: "POST",
