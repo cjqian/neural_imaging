@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/newlayout.css">
 	<script src="js/loadfb.js"></script>
 	<script src="js/addfilter.js"></script>
+	<script src="js/refresh.js"></script>
 
 <!-- Body
 	================================================== -->
@@ -132,6 +133,10 @@
 
 			<aside id="sidebar">
 				<center><h2>3. Voila!</h2></center>
+				<img id="out" src="./out.png"/>
+
+
+
 				<?php
 
        
