@@ -193,6 +193,27 @@ ul#nav li a {
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: #F06000; }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+div {
+    height: 100%;
+    float: left;
+}
+#left {
+    width:320px;
+    margin: 5px;
+}
+#center {
+    margin: 5px 0;
+    width: calc(100% - 660px);
+}
+#right {
+    margin: 5px;
+    width: 320px;
+}
+
 
 /* ------------------------------------------------------------------ */
 /* c. About Section

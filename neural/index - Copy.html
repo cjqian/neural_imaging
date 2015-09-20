@@ -1,17 +1,71 @@
-"Hello, world!"
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-<div class="row"><center><button>Connect to Facebook</button></center></div>
-    <br/><br/>
+<!--- Basic Page Needs
+    ================================================== -->
+<meta charset="utf-8">
+<title>Untitled</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <div class="row">
+<!-- Mobile Specific Metas
+   ================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <div class="twelve columns collapsed">
+<!-- CSS
+     ================================================== -->
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/media-queries.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
 
-            <h1>Pick a filter.</h1>
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+<!-- Script
+    ================================================== -->
+<script src="js/modernizr.js"></script>
+
+
+<!-- Favicons
+   ================================================== -->
+<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+<!-- FACEBOOK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '930358353703720',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Page
+    ================================================== -->
+    
+
+    <div id="left">
+        <center><button>Connect to Facebook</button></center></div>
+        <br/><br/>
+    </div>
+    <div id="center">
+        <div class="twelve columns collapsed"
 
                 <div class="columns portfolio-item">
-                    <div class="item-wrap">
 
                         <a href="#modal-01" title="">
                             <img alt="" src="img/preview/starry_night.jpg">
@@ -24,11 +78,9 @@
                             <div class="link-icon"><i class="icon-plus"></i></div>
                         </a>
 
-                    </div>
                 </div> <!-- item end -->
 
                 <div class="columns portfolio-item">
-                    <div class="item-wrap">
 
                         <a href="#modal-02" title="">
                             <img alt="" src="img/preview/woman-with-hat-matisse.jpg">
@@ -41,7 +93,6 @@
                             <div class="link-icon"><i class="icon-plus"></i></div>
                         </a>
 
-                    </div>
                 </div> <!-- item end -->
 
                 <div class="columns portfolio-item">
@@ -146,10 +197,49 @@
                     </div>
                 </div>  <!-- item end -->
 
-
-            </div> <!-- portfolio-wrapper end -->
-
         </div> <!-- twelve columns end -->
+    </div>
+    <div id="right">right text</div>
+
+    <div class="row">
+        
 
     </div> <!-- row End -->
-     <br/>
+    <br/>
+    <h1><center>2. Pick a filter.</center></h1>
+
+ <!-- Page End -->
+
+
+<!-- footer
+     ================================================== -->
+<footer>
+
+    <div class="row">
+
+        <div class="twelve columns">
+
+            <ul class="copyright">
+                <li>Format by Crystal Qian and Sean Pan</li>
+                <li>&copy; Copyright 2014 CeeVee</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</footer> <!-- Footer End-->
+
+<!-- Java Script
+    ================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/waypoints.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/init.js"></script>
+</body>
+
+</html>
