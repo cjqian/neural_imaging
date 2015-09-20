@@ -168,11 +168,11 @@ header, #content, #middle, #sidebar {
       overflow: hidden;
     }
     .selected { 
-      filter: brightness(70%) !important;
-      -webkit-filter: brightness(70%) !important;
-      -moz-filter: brightness(70%) !important;
-      -o-filter: brightness(70%) !important;
-      -ms-filter: brightness(70%) !important; 
+      filter: brightness(60%) !important;
+      -webkit-filter: brightness(60%) !important;
+      -moz-filter: brightness(60%) !important;
+      -o-filter: brightness(60%) !important;
+      -ms-filter: brightness(60%) !important; 
     }
     .box {
       float: right;
