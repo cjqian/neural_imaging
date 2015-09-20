@@ -110,8 +110,6 @@
 <aside id="sidebar">
 <center><h2>3. Voila!</h2></center>
 <?php
-
-
 $output = shell_exec("sudo -u root /var/www/html/neural.sh");
 
 $art = "examples/inputs/starry_night.jpg";
@@ -124,16 +122,19 @@ error_reporting(-1);
 echo $output;
 ?>
 
+<!-- Default profile picture -->
+
+<!-- Loading -->
+<!--<img id="loadinggif" src="buttons/dots.gif" />-->
+
 <img src ="out.png"></img>
-
-<img id="loadinggif" src="buttons/dots.gif" />
-
 </aside>
 </div>
 
 <footer>
-<center><h4>Footer</h4>
-<p>copyrights</p></center>
+<center><h4>Product of Crystal Qian and Zi Xiang Pan</h4>
+<p>Credits to <a href="http://arxiv.org/pdf/1508.06576v2.pdf">Leon Gatys'</a> paper on a deep neural network algorithm and <a href="https://github.com/jcjohnson/neural-style">@jcjohnson's</a> implementation.</p><br/>
+<p>Copyright 2015.</p></center>
 </footer>
 
 </div>
