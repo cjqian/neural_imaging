@@ -133,9 +133,7 @@
 
 			<aside id="sidebar">
 				<center><h2>3. Voila!</h2></center>
-				<img id="out" src="./out.png"/>
-
-
+				<center><img style="width:80%" id="out" src="./out.png"/></center>
 
 				<?php
 
@@ -162,11 +160,9 @@
                 }
 				?>
 				<!--<img id="img/preview/loadinggif" src="buttons/wait.gif" />-->
-
-                <a href="./out.png">Check it out here!</a>
 			</aside>
 <footer>
-	<center><h4>Product of Crystal Qian and Zi Xiang Pan</h4>
+	<center><h4>Made by Crystal Qian and Zi Xiang Pan</h4>
 	<p>Credits to <a href="http://arxiv.org/pdf/1508.06576v2.pdf">Leon Gatys'</a> paper on a deep neural network algorithm and <a href="https://github.com/jcjohnson/neural-style">@jcjohnson's</a> implementation.</p><br/>
 	<p>Copyright 2015.</p></center>
 </footer>
