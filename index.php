@@ -128,6 +128,7 @@
 			<aside id="sidebar">
 				<center><h2>3. Voila!</h2></center>
 				<?php
+				session_start();
 
 				$_SESSION['imgsrc'] = $_POST['img'];	
 
