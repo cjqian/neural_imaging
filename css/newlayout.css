@@ -1,11 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
 
 body { 
-  font-family: 'Open Sans', sans-serif;
-  color: #666;
+font-family: 'Sura', sans-serif;
+background-color: #eee;
+text-transform: lowercase;
 }
 
 /* STRUCTURE */
+#container{
+}
 
 #pagewrap {
 	padding: 5px;
@@ -123,7 +126,6 @@ canvas {
   height: 250px;
   text-align: center;
   background-size: cover;
-  border-bottom: 1px solid rgba(0,0,0,.15);
 }
 
 #profile-pic {
@@ -152,17 +154,14 @@ canvas {
 }  
 
 #content {
-	background: #fff;
 }
 #sidebar {
-	background: #fff;
 }
 header, #content, #middle, #sidebar {
 	margin-bottom: 5px;
 }
 
 #pagewrap, header, #content, #middle, #sidebar, footer {
-	border: solid 1px #fff;
 }
 
 .wrap {
