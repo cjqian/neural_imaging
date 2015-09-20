@@ -49,70 +49,70 @@
 					<!-- Define all of the tiles: -->
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="1" src="img/preview/starry_night.jpg" />
+							<img id="starry_night" src="img/preview/starry_night.jpg" onclick="" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Starry Night</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="2" src="img/preview/the_scream.png" />
+							<img id="the_scream" src="img/preview/the_scream.png" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">The Scream</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="3" src="img/preview/woman-with-hat.jpg" />
+							<img id="woman-with-hat" src="img/preview/woman-with-hat.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Woman with hat</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="4" src="img/preview/picasso.jpg" />
+							<img id="picasso" src="img/preview/picasso.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Picasso</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="5" src="img/preview/escher_sphere.jpg" />
+							<img id="escher_sphere" src="img/preview/escher_sphere.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Escher</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="6" src="img/preview/pollock.jpg" />
+							<img id="pollock" src="img/preview/pollock.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Autumn Rhythm</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="7" src="img/preview/mona.jpg" />
+							<img id="mona" src="img/preview/mona.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Mona Lisa</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="8" src="img/preview/FightingTemeraire.jpg" />
+							<img id="FightingTemeraire" src="img/preview/FightingTemeraire.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Fighting Temeraire</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="9" src="img/preview/sunrise.jpg" />
+							<img id="sunrise" src="img/preview/sunrise.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Sunrise impression</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img data-id="10" src="img/preview/mondrian.jpg" />
+							<img id="mondrian" src="img/preview/mondrian.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Mondrian</div>
 						</div>
@@ -129,6 +129,7 @@
 				<center><h2>3. Voila!</h2></center>
 				<?php
 
+				$_SESSION['imgsrc'] = $_POST['img'];	
 
 				$output = shell_exec("sudo -u root /var/www/html/neural.sh");
 
