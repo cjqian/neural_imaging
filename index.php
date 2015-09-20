@@ -155,3 +155,13 @@
 
 			</div>
 		</body>
+
+
+<footer>
+	<center><h4>Product of Crystal Qian and Zi Xiang Pan</h4>
+	<p>Credits to <a href="http://arxiv.org/pdf/1508.06576v2.pdf">Leon Gatys'</a> paper on a deep neural network algorithm and <a href="https://github.com/jcjohnson/neural-style">@jcjohnson's</a> implementation.</p><br/>
+	<p>Copyright 2015.</p></center>
+</footer>
+
+</div>
+</body>
