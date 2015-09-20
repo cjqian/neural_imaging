@@ -2,138 +2,156 @@
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<head><script src="js/jquery-1.11.3.min.js"></script></head>
 
 <!--- Basic Page Needs
-================================================== -->
-<meta charset="utf-8">
-<title>Selfie dreams</title>
-<meta name="description" content="">
-<meta name="author" content="">
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Selfie dreams</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-<!-- CSS
-================================================== -->
-<link rel="stylesheet" href="css/newlayout.css">
-<script src="js/loadfb.js"></script>
-<body class="no-touch">
-<div id="pagewrap">
+<!-- CSS and JS
+	================================================== -->
+	<link rel="stylesheet" href="css/newlayout.css">
+	<script src="js/loadfb.js"></script>
+	<script src="js/addfilters.js"></script>
 
-<header>
-<h1><center>Selfie dreams</center></h1>
-<h3><center>What are your dreams made of?</center></h3>
-<br></br>
-</header>
+<!-- Body
+	================================================== -->
+	
+	<body class="no-touch">
+		<div id="pagewrap">
 
-<section id="content">
-<center><h2>1. Login</h2></center>
-<br>
-<div id="#pic-container">
-<img id="placeholder" src="buttons/blankfb.png">
-<canvas id="fb-img" width="200px" height="200px"></canvas>
-</div>
-<br>
-<button onclick="facebookLogin()"><img src="buttons/fb.png" alt="Submit" ></button></center>
-</section>
+			<header>
+				<h1><center>Selfie dreams</center></h1>
+				<h3><center>What are your dreams made of?</center></h3>
+				<br></br>
+			</header>
 
-<section id="middle">
-<h2><center>2. Pick a style</center></h2>
+			<section id="content">
+				<center><h2>1. Login</h2></center>
+				<br>
+				<div id="#pic-container">
+					<img id="placeholder" src="buttons/blankfb.png">
+					<canvas id="fb-img" width="200px" height="200px"></canvas>
+				</div>
+				<br>
+				<button onclick="facebookLogin()"><img src="buttons/fb.png" alt="Submit" ></button></center>
+			</section>
 
-<div class="wrap">
+			<section id="middle">
+				<h2><center>2. Pick a style</center></h2>
 
-<!-- Define all of the tiles: -->
+				<form>
+				<div class="wrap">
+					
+					<!-- Define all of the tiles: -->
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="1" src="img/preview/starry_night.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Starry Night</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="2" src="img/preview/the_scream.png" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">The Scream</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="3" src="img/preview/woman-with-hat.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Woman with hat</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="4" src="img/preview/picasso.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Picasso</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="5" src="img/preview/escher_sphere.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Escher</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="6" src="img/preview/pollock.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Autumn Rhythm</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="7" src="img/preview/mona.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Mona Lisa</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="8" src="img/preview/FightingTemeraire.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Fighting Temeraire</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="9" src="img/preview/sunrise.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Sunrise impression</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="boxInner">
+							<img data-id="10" src="img/preview/mondrian.jpg" />
+							<input type="hidden" name="images[]" />
+							<div class="titleBox">Mondrian</div>
+						</div>
+					</div>
 
-<div class="box">
-<div class="boxInner">
-<img id="starry_night" src="img/preview/starry_night.jpg" />
-<div class="titleBox">Starry Night</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="the_scream" src="img/preview/the_scream.png" />
-<div class="titleBox">The Scream</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="woman-with-hat" src="img/preview/woman-with-hat.jpg" />
-<div class="titleBox">Woman with hat</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="picasso" src="img/preview/picasso.jpg" />
-<div class="titleBox">Picasso</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="escher_sphere" src="img/preview/escher_sphere.jpg" />
-<div class="titleBox">Escher</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="pollock" src="img/preview/pollock.jpg" />
-<div class="titleBox">Autumn Rhythm</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="mona" src="img/preview/mona.jpg" />
-<div class="titleBox">Mona Lisa</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="FightingTemeraire" src="img/preview/FightingTemeraire.jpg" />
-<div class="titleBox">Fighting Temeraire</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="sunrise" src="img/preview/sunrise.jpg" />
-<div class="titleBox">Sunrise impression</div>
-</div>
-</div>
-<div class="box">
-<div class="boxInner">
-<img id="mondrian" src="img/preview/mondrian.jpg" />
-<div class="titleBox">Mondrian</div>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<aside id="sidebar">
-<center><h2>3. Voila!</h2></center>
-<?php
+				</div> <!--end wrap-->
+				<center><input type="submit" value="submit" /></center>
+				</form>
 
 
-$output = shell_exec("sudo -u root /var/www/html/neural.sh");
+			</section>
 
-$art = "examples/inputs/starry_night.jpg";
-$source = "examples/inputs/brad_pitt.jpg";
+			<aside id="sidebar">
+				<center><h2>3. Voila!</h2></center>
+				<?php
 
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
 
-echo $output;
-?>
+				$output = shell_exec("sudo -u root /var/www/html/neural.sh");
 
-<img src ="out.png"></img>
+				$art = "examples/inputs/starry_night.jpg";
+				$source = "examples/inputs/brad_pitt.jpg";
 
-<img id="loadinggif" src="buttons/dots.gif" />
+				ini_set('display_errors',1);
+				ini_set('display_startup_errors',1);
+				error_reporting(-1);
 
-</aside>
+				echo $output;
+				?>
 
-<footer>
-<center><h4>Footer</h4>
-<p>copyrights</p></center>
-</footer>
+				<img src ="out.png"></img>
 
-</div>
-</body>
+				<img id="loadinggif" src="buttons/dots.gif" />
+
+			</aside>
+
+			<footer>
+				<center><h4>Footer</h4>
+					<p>copyrights</p></center>
+				</footer>
+
+			</div>
+		</body>

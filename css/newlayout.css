@@ -168,6 +168,13 @@ header, #content, #middle, #sidebar {
 .wrap {
       overflow: hidden;
     }
+    .selected { 
+      filter: brightness(70%) !important;
+      -webkit-filter: brightness(70%) !important;
+      -moz-filter: brightness(70%) !important;
+      -o-filter: brightness(70%) !important;
+      -ms-filter: brightness(70%) !important; 
+    }
     .box {
       float: right;
       position: relative;
@@ -226,6 +233,7 @@ header, #content, #middle, #sidebar {
       }
     }
 }
+
 
 
 
