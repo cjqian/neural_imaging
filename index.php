@@ -32,7 +32,6 @@
 			<header>
 				<h1><center>Deepict</center></h1>
 				<h3><center>Deep neural network imaging</center></h3>
-				<br></br>
 			</header>
 
     
@@ -162,9 +161,9 @@
 				<!--<img id="img/preview/loadinggif" src="buttons/wait.gif" />-->
 			</aside>
 <footer>
-	<center><h4>Made by Crystal Qian and Zi Xiang Pan</h4>
-	<p>Credits to <a href="http://arxiv.org/pdf/1508.06576v2.pdf">Leon Gatys'</a> paper on a deep neural network algorithm and <a href="https://github.com/jcjohnson/neural-style">@jcjohnson's</a> implementation.</p><br/>
-	<p>Copyright 2015.</p></center>
+	<center><h4>Made by Crystal Qian and Zi Xiang Pan at hackmit</h4>
+	<p>with help from <a href="http://arxiv.org/pdf/1508.06576v2.pdf">Leon Gatys'</a> paper on a deep neural network algorithm and <a href="https://github.com/jcjohnson/neural-style">@jcjohnson's</a> implementation.</p><br/>
+	<p>Copyright (kind of) 2015.</p></center>
 </footer>
 
 </div>
