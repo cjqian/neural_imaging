@@ -19,11 +19,11 @@
 <div id="pagewrap">
 
 <header>
-<h1><center>Selfie dreams</center></h1>
-<h3><center>What are your dreams made of?</center></h3>
+<h1><center>depict</center></h1>
+<h3><center>deep neural network image generation</center></h3>
 <br></br>
 </header>
-
+<div id="container">
 <section id="content">
 <center><h2>1. Login</h2></center>
 <br>
@@ -129,6 +129,7 @@ echo $output;
 <img id="loadinggif" src="buttons/dots.gif" />
 
 </aside>
+</div>
 
 <footer>
 <center><h4>Footer</h4>
