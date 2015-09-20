@@ -7,7 +7,7 @@
 <!--- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-	<title>Selfie dreams</title>
+	<title>Deepict</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -15,7 +15,7 @@
 	================================================== -->
 	<link rel="stylesheet" href="css/newlayout.css">
 	<script src="js/loadfb.js"></script>
-	<script src="js/addfilters.js"></script>
+	<script src="js/addfilter.js"></script>
 
 <!-- Body
 	================================================== -->
@@ -24,8 +24,8 @@
 		<div id="pagewrap">
 
 			<header>
-				<h1><center>Selfie dreams</center></h1>
-				<h3><center>What are your dreams made of?</center></h3>
+				<h1><center>Deepict</center></h1>
+				<h3><center>Deep neural network imaging</center></h3>
 				<br></br>
 			</header>
 
