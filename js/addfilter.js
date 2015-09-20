@@ -4,7 +4,7 @@ $(function(){
     	// Get the src of the image
     	var src = $(this).attr("src");
 
-    	$.post("/backend.php", {"img": src});
+    	$.post("/index.php", {"img": src});
 	    var $this = $(this);
 	    $this.toggleClass('selected');
 	    
