@@ -13,7 +13,7 @@ body {
 	margin: 20px auto;
 }
 header {
-	height: 100px;
+	height: 150px;
 	padding: 0 15px;
 }
 #content {
@@ -126,10 +126,10 @@ header, #content, #middle, #sidebar {
       overflow: hidden;
     }
     .box {
-      float: left;
+      float: right;
       position: relative;
-      width: 30%;
-      padding-bottom: 30%;
+      width: 20%;
+      padding-bottom: 20%;
     }
     .boxInner {
       position: absolute;
