@@ -11,7 +11,7 @@
 
 cd ~/neural-style
 
-th ~/neural-style/neural_style.lua -style_image $1 -content_image $2 -image_size 180 -num_iterations 100 -gpu -1
+th ~/neural-style/neural_style.lua -style_image $1 -content_image $2 -image_size 200 -num_iterations 300 -gpu -1 -content_weight 8 -init image
 cp out.png ~/Code/neural_imaging
 
 echo "end"

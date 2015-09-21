@@ -2,7 +2,9 @@
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head><script src="js/jquery-1.11.3.min.js"></script></head>
+<head><script src="js/jquery-1.11.3.min.js"></script>
+
+</head>
 
 <!--- Basic Page Needs
 	================================================== -->
@@ -39,8 +41,10 @@
 				<center><h2>1. Login</h2></center>
 				<br>
 				<div id="#pic-container">
-					<img id="~/Code/neural_imaging/img/preview/placeholder" src="buttons/blankfb.png">
-					<canvas id="fb-img" width="200px" height="200px"></canvas>
+                    <!--<img id="~/Code/neural_imaging/img/mickey" style="width:80%" src="img/mickey.jpg">-->
+                    <img style="width:80%" id="~/Code/neural_imaging/img/golden_gate.jpg" stype="width:80%" src="img/golden_gate.jpg">
+					<!--<img id="~/Code/neural_imaging/img/preview/placeholder" src="buttons/blankfb.png">
+					<canvas id="fb-img" width="200px" height="200px"></canvas>-->
 
 				<button onclick="facebookLogin()"><i class="fa fa-facebook"></i> Connect to Facebook</button></center>
 				</div>
@@ -62,7 +66,7 @@
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/the_scream" src="img/preview/the_scream.png" />
+							<img id="~/Code/neural_imaging/img/the_scream" src="img/the_scream.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">The Scream</div>
 						</div>
@@ -142,7 +146,7 @@
                 $artvar = $_POST['img'];
                 print $artvar;
 				$art = $artvar . ".jpg";
-				$source = "examples/inputs/brad_pitt.jpg";
+				$source = "~/Code/neural_imaging/img/golden_gate.jpg";
 
                 
 				$output = shell_exec("./neural.sh " . $art . " " . $source);
