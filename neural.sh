@@ -9,11 +9,20 @@
 #export USER=root
 #export USERNAME=root
 
-cd ~/neural-style
+NEURAL_PATH = /home/ubuntu/neural-style/
+NEURAL_PATH_STYLE = /home/ubuntu/neural-style/neural_style.lua
 
-th ~/neural-style/neural_style.lua -style_image $1 -content_image $2 -image_size 200 -num_iterations 300 -gpu -1 -content_weight 8 -init image
-cp out.png ~/Code/neural_imaging
+HTML_PATH = /var/www/html/
+
+ART = img/preview/
+ART_PATH = $HTML_PATH$ART$1
+echo $ART_PATH
+cd $NEURAL_PATH
+
+th $NEURAL_PATH_STYLE -style_image $ART_PATH -content_image $2 -image_size 200 -num_iterations 300 -gpu -1 -content_weight 8 -init image
+
+cp out.png $HTML_PATH
+cd $HTML_PATH
 
 echo "end"
-cd ~/Code/neural_imaging
 

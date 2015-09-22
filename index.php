@@ -42,8 +42,8 @@
 				<br>
 				<div id="#pic-container">
                     <!--<img id="~/Code/neural_imaging/img/mickey" style="width:80%" src="img/mickey.jpg">-->
-                    <img style="width:80%" id="~/Code/neural_imaging/img/golden_gate.jpg" stype="width:80%" src="img/golden_gate.jpg">
-					<!--<img id="~/Code/neural_imaging/img/preview/placeholder" src="buttons/blankfb.png">
+                    <img style="width:80%" "" stype="width:80%" src="profpic.jpg">
+					<!--<img id="placeholder" src="buttons/blankfb.png">
 					<canvas id="fb-img" width="200px" height="200px"></canvas>-->
 
 				<button onclick="facebookLogin()"><i class="fa fa-facebook"></i> Connect to Facebook</button></center>
@@ -59,7 +59,7 @@
 					<!-- Define all of the tiles: -->
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/starry_night" src="img/preview/starry_night.jpg" onclick="" />
+							<img id="starry_night" src="img/preview/starry_night.jpg" onclick="" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Starry Night</div>
 						</div>
@@ -73,56 +73,56 @@
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/woman-with-hat" src="img/preview/woman-with-hat.jpg" />
+							<img id="woman-with-hat" src="img/preview/woman-with-hat.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Woman with hat</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/picasso" src="img/preview/picasso.jpg" />
+							<img id="picasso" src="img/preview/picasso.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Picasso</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/escher_sphere" src="img/preview/escher_sphere.jpg" />
+							<img id="escher_sphere" src="img/preview/escher_sphere.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Escher</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/pollock" src="img/preview/pollock.jpg" />
+							<img id="pollock" src="img/preview/pollock.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Autumn Rhythm</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/mona" src="img/preview/mona.jpg" />
+							<img id="mona" src="img/preview/mona.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Mona Lisa</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/FightingTemeraire" src="img/preview/FightingTemeraire.jpg" />
+							<img id="FightingTemeraire" src="img/preview/FightingTemeraire.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Fighting Temeraire</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/sunrise" src="img/preview/sunrise.jpg" />
+							<img id="sunrise" src="img/preview/sunrise.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Sunrise impression</div>
 						</div>
 					</div>
 					<div class="box">
 						<div class="boxInner">
-							<img id="~/Code/neural_imaging/img/preview/mondrian" src="img/preview/mondrian.jpg" />
+							<img id="mondrian" src="img/preview/mondrian.jpg" />
 							<input type="hidden" name="images[]" />
 							<div class="titleBox">Mondrian</div>
 						</div>
@@ -146,7 +146,7 @@
                 $artvar = $_POST['img'];
                 print $artvar;
 				$art = $artvar . ".jpg";
-				$source = "~/Code/neural_imaging/img/golden_gate.jpg";
+				$source = "profpic.jpg";
 
                 
 				$output = shell_exec("./neural.sh " . $art . " " . $source);
